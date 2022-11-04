@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import "./About.scss";
-
+import { AppWrap } from "../../Wrapper";
 import { urlFor, client } from "../../client";
 
-export default function About() {
+export default AppWrap(function About() {
   const [abouts, setAbouts] = useState([]);
 
   useEffect(() => {
@@ -43,4 +43,4 @@ export default function About() {
       </h2>
     </>
   );
-}
+}, "about");
